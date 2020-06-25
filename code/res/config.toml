@@ -1,0 +1,65 @@
+[processing.parser]
+time_bias_datacast = 0.0 # in seconds; added to time from screencast to lookup for events in datacast
+
+[processing.tuning]
+orb_scroll_threshold = 500 # only applied on root layer, thresholds the max difference between estimated and datacast value
+
+[splitting.splitter]
+withdraw_treshold = 32 # intra-user states with screenshots smaller or equal that extent are ignored
+pixel_history_depth = 5 # how much history about pixels is kept in the intra-user states
+
+[splitting.cleaner]
+frame_count = 4 # intra-user states with less or equal frames will be merged into larger states
+iteration_count = 3 # maximum iterations of the cleaning algorithm
+
+[model]
+layer_cluster_threshold = 0.75
+
+[model.processing]
+layer_threshold = 0.5
+
+[model.splitting]
+layer_threshold = 0.5
+
+[model.merging]
+merge_threshold = 65536 # 256x256 pixels of overlap
+thread_count = 12
+
+[visual_debug]
+window_width = 1600
+window_height = 1000
+window_padding = 5
+
+[visual_debug.enable_for]
+parser = false
+orb_scroll = false
+splitter = false
+cleaner = false
+merger = false
+
+[descriptor.OCR]
+confidence_threshold = 0.5
+
+[feature_vector]
+margin_kernel_size = 1
+
+[feature_vector.enable]
+histogram = false
+pixel_diff = true
+edge_change_ratio = true
+mssim = true
+psnr = true
+sift = true
+bag_of_words = false
+n_grams = false
+optical_flow = false
+
+[feature.bag_of_words]
+min_word_length = 3
+
+[serializing]
+intra_user_states = true
+inter_user_states = true
+
+[general]
+task_report_wait_ms = 2500

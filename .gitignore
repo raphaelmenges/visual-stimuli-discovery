@@ -1,0 +1,51 @@
+# Python
+__pycache__
+*.pyc
+
+# Generated stuff
+_generated
+
+# Built stuff
+_build
+build
+build-*
+CMakeLists.txt.user
+
+# User files
+*.pro.user
+*.autosave
+.~lock.*
+.ipynb_checkpoints
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app

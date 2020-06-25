@@ -1,0 +1,45 @@
+[submodule "third_party/opencv"]
+	path = third_party/opencv
+	url = https://github.com/opencv/opencv
+[submodule "GazeMiner/ext/eigen-git-mirror"]
+	path = code/ext/eigen-git-mirror
+	url = https://github.com/eigenteam/eigen-git-mirror.git
+[submodule "GazeMiner/ext/googletest"]
+	path = code/ext/googletest
+	url = https://github.com/google/googletest.git
+[submodule "GazeMiner/ext/libsimplewebm"]
+	path = code/ext/libsimplewebm
+	url = https://github.com/raphaelmenges/libsimplewebm.git
+[submodule "GazeMiner/ext/cxxopts"]
+	path = code/ext/cxxopts
+	url = https://github.com/jarro2783/cxxopts.git
+[submodule "GazeMiner/ext/cpptoml"]
+	path = code/ext/cpptoml
+	url = https://github.com/skystrife/cpptoml.git
+[submodule "GazeMiner/ext/spdlog"]
+	path = code/ext/spdlog
+	url = https://github.com/gabime/spdlog.git
+[submodule "GazeMiner/ext/cvui"]
+	path = code/ext/cvui
+	url = https://github.com/Dovyski/cvui.git
+[submodule "GazeMiner/ext/json"]
+	path = code/ext/json
+	url = https://github.com/nlohmann/json.git
+[submodule "GazeMiner/ext/clip"]
+	path = code/ext/clip
+	url = https://github.com/dacap/clip.git
+[submodule "third_party/leptonica"]
+	path = third_party/leptonica
+	url = https://github.com/DanBloomberg/leptonica
+[submodule "third_party/tesseract"]
+	path = third_party/tesseract
+	url = https://github.com/tesseract-ocr/tesseract
+[submodule "third_party/shogun"]
+	path = third_party/shogun
+	url = https://github.com/shogun-toolbox/shogun.git
+[submodule "third_party/opencv_contrib"]
+	path = third_party/opencv_contrib
+	url = https://github.com/opencv/opencv_contrib.git
+[submodule "GazeMiner/ext/ThreadPool"]
+	path = code/ext/ThreadPool
+	url = https://github.com/progschj/ThreadPool
