@@ -38,7 +38,7 @@ The procedure assumes Python 3 to be the standard Python environment on your sys
 * `-b` (`--build`): compiles the framework after generation
 
 ## Dataset
-TODO
+https://zenodo.org/record/3908124
 
 ## Tools
 The folder _tools_ contains further software for the evaluation of the Visual Stimuli Discovery.
