@@ -55,8 +55,8 @@ The folder _tools_ contains further software for the evaluation of the Visual St
 Developed as part of the [GazeMining](https://gazemining.de/index_en.html) research project. We acknowledge the financial support by the Federal Ministry of Education and Research of Germany under the project number 01IS17095B.
 
 ## TODO
-- Better understanding of dynamic linking of Tesseract and Leptonica under Linux
-- Fix deployment of the framework under Linux in regard to dynamic libraries of Tesseract and Leptonica (rpath / ld_library_path)
-- Framework issue: Trainer and other applications can only be built when Visual Debug is enabled...
+- Better understanding of dynamic linking of Tesseract and Leptonica under Linux.
+- Fix deployment of the framework under Linux in regard to dynamic libraries of Tesseract and Leptonica (rpath / ld_library_path).
+- Framework issue: Trainer and other applications can only be built when Visual Debug is enabled.
 - Change static linking of OpenCV and internal libraries to dynamic linking?
-- Fix linking of Shogun in Debug mode (both Windows and Linux)
+- Fix linking of Shogun in Debug mode (both Windows and Linux).
