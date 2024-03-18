@@ -1,6 +1,5 @@
-# Visual Stimuli Discovery
-Visual Stimuli Discovery repository by EYEVIDO GmbH and the Institute for Web Science and Technologies.
-Developed as part of the [GazeMining](https://gazemining.de/index_en.html) research project.
+# WebVSD: Visual Stimuli Discovery for Websites
+A implementation of the visual stimuli discovery for Websites in C++, using OpenCV, Tesseract, and Shogun.
 
 ## Requirements
 Generation and compilation have been tested on Windows 10 with Visual Studio 2015 or 2017 and Debian 8.8 with the software listed below.
@@ -53,7 +52,7 @@ The folder _tools_ contains further software for the evaluation of the Visual St
 >THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ## Acknowledgment
-We acknowledge the financial support by the Federal Ministry of Education and Research of Germany under the project number 01IS17095B.
+Developed as part of the [GazeMining](https://gazemining.de/index_en.html) research project. We acknowledge the financial support by the Federal Ministry of Education and Research of Germany under the project number 01IS17095B.
 
 ## TODO
 - Better understanding of dynamic linking of Tesseract and Leptonica under Linux
