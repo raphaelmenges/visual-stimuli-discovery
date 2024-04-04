@@ -95,7 +95,6 @@ set(EXT_PATH ${CMAKE_SOURCE_DIR}/ext)
 set(RES_PATH ${CMAKE_SOURCE_DIR}/res)
 set(EXE_PATH ${CMAKE_SOURCE_DIR}/src/exe)
 set(LIB_PATH ${CMAKE_SOURCE_DIR}/src/lib)
-set(TEST_PATH ${CMAKE_SOURCE_DIR}/src/test)
 
 # Add resources folder as add_subdirectory
 add_subdirectory(${RES_PATH})
@@ -298,60 +297,6 @@ foreach(SUBDIR ${SUBDIRS})
 		add_subdirectory(${EXE_PATH}/${SUBDIR})
 	endif()
 endforeach()
-
-#---------------------------------------------------------------------------------------
-# Test
-#---------------------------------------------------------------------------------------
-
-set("BUILD_TESTS" OFF CACHE BOOL "Decide whether tests are built.")
-
-if(${BUILD_TESTS})
-
-	# Google Test
-	set(GTEST_PATH ${EXT_PATH}/googletest)
-	set(BUILD_GMOCK ON CACHE INTERNAL "")
-	set(BUILD_GTEST OFF CACHE INTERNAL "")
-	set(BUILD_SHARED_LIBS OFF CACHE INTERNAL "")
-	set(gmock_build_tests OFF CACHE INTERNAL "")
-	set(gtest_build_samples OFF CACHE INTERNAL "")
-	set(gtest_build_tests OFF CACHE INTERNAL "")
-	set(gtest_disable_pthreads OFF CACHE INTERNAL "")
-	set(gtest_force_shared_crt ON CACHE INTERNAL "")
-	set(gtest_hide_internal_symbols ON CACHE INTERNAL "")
-	add_subdirectory(${GTEST_PATH})
-	set(INSTALL_GMOCK OFF CACHE INTERNAL "" FORCE) # must be called after add_subdirectory with force (as not set with 'set' but with other function)
-	set(INSTALL_GTEST OFF CACHE INTERNAL "" FORCE) # must be called after add_subdirectory with force (as not set with 'set' but with other function)
-	include_directories(${GTEST_PATH}/googlemock/include)
-	include_directories(${GTEST_PATH}/googletest/include)
-	set(TEST_LIBRARIES gmock_main gtest_main) # use the versions that provide main function
-
-	# Tests
-	set(TESTS "") # collect tests
-	message(STATUS "Collecting Tests")
-	SUBDIRLIST(SUBDIRS ${TEST_PATH})
-	foreach(SUBDIR ${SUBDIRS})
-		message(STATUS "- ${SUBDIR}")
-		add_subdirectory(${TEST_PATH}/${SUBDIR})
-	endforeach()
-
-	# CTest
-	enable_testing()
-	foreach(TEST ${TESTS})
-
-		# Accumulate path to tests
-		set(TEST_PATH ${EXECUTABLE_OUTPUT_PATH})
-		
-		# Workaround for MSVC, where binaries are stored in subfolder named after configuration
-		if(MSVC)
-			set(TEST_PATH ${TEST_PATH}/${CONFIG_LOWER_CASE})
-		endif(MSVC)
-
-		# Add test
-		add_test(GeneralTest ${TEST_PATH}/${TEST})
-		
-	endforeach()
-
-endif()
 
 #---------------------------------------------------------------------------------------
 # Copy of shared libraries
